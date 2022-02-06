@@ -3,14 +3,20 @@
 
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
-  mount: {},
+  mount: {
+  },
   packageOptions: {
     /* ... */
   },
   devOptions: {
     tailwindConfig: "./tailwind.config.js",
   },
-  plugins: ["@snowpack/plugin-postcss"],
+  plugins: [
+    "@marlonmarcello/snowpack-plugin-pug",
+    "@snowpack/plugin-sass",
+    "@snowpack/plugin-postcss",
+    '@snowpack/plugin-vue'
+  ],
   buildOptions: {
     /* ... */
   },

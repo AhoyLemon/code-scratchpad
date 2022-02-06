@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Code Scratchpad</title>
-        <link rel="stylesheet" type="text/css" href="src/css/index.css" />
-    </head>
-    <body>
-        <!-- TODO: delete the following div and get going! -->
-        <div class="container">
-            <h1 class="text-center">Scratchpad</h1>
-        </div>
 
-        <script type="module" src="/src/js/index.js"></script>
-    </body>
+<head>
+	<meta charset="utf-8">
+	<title>Code Scratchpad</title>
+	<link rel="stylesheet" type="text/css" href="src/css/index.css" />
+</head>
+
+<body>
+
+	<h1>Welcome to Snowpack, okay!</h1>
+
+	<div id="app">
+		<h2 v-text="message">Hello</h2>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js"></script>
+	<script type="module" src="/src/js/index.js"></script>
+
+
+	<!-- <script>
+		new Vue({
+			el: '#app',
+			data: {
+				message: 'Hello Vue.js!'
+			}
+		});
+	</script> -->
+	<script src="/src/js/vue.js"></script>
+
+
+</body>
+
 </html>
