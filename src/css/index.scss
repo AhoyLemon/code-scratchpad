@@ -11,6 +11,12 @@
  * Note that this uses PostCSS which always nests rules
  * with a `&` prefix.
  **/
+
+
+@import "./partials/_variables";
+@import "./partials/_reset";
+@import "./partials/_defaults";
+
 body {
   background: #ffefff;
 

@@ -1,6 +1,6 @@
 new Vue({
   el: '#app',
   data: {
-    message: 'Hello Slab'
+    message: 'Hi there, Savas Labs.'
   }
 });

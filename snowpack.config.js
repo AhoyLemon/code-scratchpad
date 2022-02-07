@@ -14,8 +14,7 @@ module.exports = {
   plugins: [
     "@marlonmarcello/snowpack-plugin-pug",
     "@snowpack/plugin-sass",
-    "@snowpack/plugin-postcss",
-    '@snowpack/plugin-vue'
+    "@snowpack/plugin-postcss"
   ],
   buildOptions: {
     /* ... */
