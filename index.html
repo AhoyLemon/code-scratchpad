@@ -13,9 +13,67 @@
 
 
 	<div id="app">
-		<h2 v-text="message">Hello</h2>
+		<form class="order-form" @submit.prevent="submitShirtForm">
+
+			<h2>T-Shirt Form</h2>
+			<fieldset>
+				<div class="field name">
+					<input type="text" id="MyName" v-model="my.name" placeholder="Enter your name..." />
+				</div>
+
+				<div class="field quantity">
+					<input type="number" id="shirtQuantity" v-model="my.shirtQuantity" placeholder="Quantity of shirts..." min="1" />
+				</div>
+
+				<div class="field sizes">
+
+					<div class="radios-label">Your Shirt Size</div>
+
+					<div class="radios">
+						<label>
+							<input type="radio" id="shirtQuantity" v-model="my.shirtSize" value="Small" />
+							<span>Small</span>
+						</label>
+						<label>
+							<input type="radio" id="shirtQuantity" v-model="my.shirtSize" value="Medium" />
+							<span>Medium</span>
+						</label>
+						<label>
+							<input type="radio" id="shirtQuantity" v-model="my.shirtSize" value="Large" />
+							<span>Large</span>
+						</label>
+						<label>
+							<input type="radio" id="shirtQuantity" v-model="my.shirtSize" value="Extra Large" />
+							<span>Extra Large</span>
+						</label>
+						<label>
+							<input type="radio" id="shirtQuantity" v-model="my.shirtSize" value="Double XL:" />
+							<span>Double XL</span>
+						</label>
+					</div>
+				</div>
+
+
+				<div class="field shirt-type">
+					<select v-model="my.shirtType">
+						<option value="tanktop">tanktop</option>
+						<option value="t ">T-Shirt</option>
+					</select>
+				</div>
+			</fieldset>
+
+			<div class="button-holder">
+				<button type="reset">Clear Fields</button>
+				<button type="submit">Submit</button>
+			</div>
+
+			<div class="alert" v-if="showAlert" v-html="computedAlert"></div>
+
+		</form>
 	</div>
 
+
+	
 
 
 
@@ -33,7 +91,8 @@
 
 
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.common.dev.min.js" integrity="sha512-TpgbLHXaTCAZ7ULhjopb1PveTz5Jx6KEQUtMfXhV0m0EArh+6O8ybZjjDN1Yug6oagN6iFm6EoMjuYSiFr0qXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script type="module" src="/src/js/index.js"></script>
 
 	<script src="/src/js/vue.js"></script>
